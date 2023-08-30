@@ -11,7 +11,7 @@ const ContactForm = () => {
   const dispatch = useDispatch();
 
   const addContact = value => {
-    const { name: nameProps, number: numberProps } = value;
+    const { name: nameProps, phone: numberProps } = value;
     const includsName = contactList.find(
       ({ name, number }) =>
         name.toLowerCase() === nameProps.toLowerCase() || number === numberProps
