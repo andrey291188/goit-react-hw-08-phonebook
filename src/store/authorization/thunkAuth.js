@@ -56,7 +56,7 @@ export const currentUserThunk = createAsyncThunk(
         setAuthHeader(access_token)
         try {
             const data = await currentUser()
-            toast.success('You seccessfully logged out!')
+            toast.success('You have seccessfully logged in!')
             return data
         } catch (error) {
             toast.error(error.message)
