@@ -37,7 +37,7 @@ export const logOutThunk = createAsyncThunk(
         try {
             await logOut()
             clearAuthHeader()
-            toast.success('You seccessfully logged out!') 
+            toast.warn('You seccessfully logged out!') 
         } catch (error) {
             toast.error(error.message)
             return rejectWithValue(error.message)
