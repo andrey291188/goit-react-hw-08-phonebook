@@ -11,10 +11,10 @@ const ContactForm = () => {
   const dispatch = useDispatch();
 
   const addContact = value => {
-    const { name: nameProps, phone: numberProps } = value;
+    const { name: nameProps, number: numberProps } = value;
     const includsName = contactList.find(
-      ({ name, phone }) =>
-        name.toLowerCase() === nameProps.toLowerCase() || phone === numberProps
+      ({ name, number }) =>
+        name.toLowerCase() === nameProps.toLowerCase() || number === numberProps
     );
     if (includsName) {
       toast.warn(`Name ${nameProps}, phone ${numberProps} is already in contacts`);
