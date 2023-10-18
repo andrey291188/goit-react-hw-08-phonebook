@@ -36,6 +36,7 @@ export const handlePending = state => {
   };
   
   export const handleRejected = (state, action) => {
+    state.isRefreshing = false;
     state.isLoading = false;
     state.error = action.payload;
   };
